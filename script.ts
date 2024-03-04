@@ -7,4 +7,4 @@ function hello() {
     return [num, qwer, bob];
 }
 
-hello()   ;
+hello();
