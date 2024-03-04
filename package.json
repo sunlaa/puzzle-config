@@ -13,8 +13,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npx validate-branch-name"
     }
+  },
+  "validate-branch-name": {
+    "pattern": "^(master|main|develop){1}$|^(feature|fix|hotfix|release)/.+$",
+    "errorMsg": "your own error message"
   },
   "author": "",
   "license": "ISC",
