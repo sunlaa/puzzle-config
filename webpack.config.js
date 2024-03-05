@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 module.exports = {
   entry: './src/index.ts',
   mode: 'development',
@@ -14,7 +13,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
@@ -30,7 +29,9 @@ module.exports = {
     compress: true,
     port: 4000,
   },
-  plugins: [new HtmlWebpackPlugin({
-    title: 'RSS-Puzzle'
-  })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'RSS-Puzzle',
+    }),
+  ],
 };
