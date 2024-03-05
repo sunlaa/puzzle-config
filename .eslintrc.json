@@ -13,5 +13,6 @@
   "plugins": ["prettier", "@typescript-eslint"],
   "rules": {
     "prettier/prettier": ["error"]
-  }
+  },
+  "ignorePatterns": ["webpack.config.js", "dist", "node_modules"]
 }
