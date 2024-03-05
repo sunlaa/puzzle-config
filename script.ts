@@ -1,1 +1,1 @@
-let qwer = 454;
+const qwe = '123';

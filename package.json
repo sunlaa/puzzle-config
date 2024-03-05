@@ -8,17 +8,12 @@
     "format": "prettier . --write",
     "ci:format": "prettier . --check",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "prepare": "husky"
+    "fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npx validate-branch-name"
+      "pre-commit": "npm run lint && npm run format"
     }
-  },
-  "validate-branch-name": {
-    "pattern": "^(master|main|develop){1}$|^(feature|fix|hotfix|release)/.+$",
-    "errorMsg": "your own error message"
   },
   "author": "",
   "license": "ISC",
@@ -31,9 +26,8 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
-    "husky": "^9.0.11",
+    "husky": "^4.3.8",
     "prettier": "^3.2.5",
-    "typescript": "^5.3.3",
-    "validate-branch-name": "^1.3.0"
+    "typescript": "^5.3.3"
   }
 }
